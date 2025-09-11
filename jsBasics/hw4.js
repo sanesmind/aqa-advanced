@@ -30,10 +30,10 @@ console.log("-------------------------------");
 //task 3
 
 const age = 26;
-const adult = age > 17;
+const isAdult = age >= 18;
 
 console.log(age);
-console.log(adult);
+console.log(isAdult);
 
 console.log("-----------------------------");
 //task 4
