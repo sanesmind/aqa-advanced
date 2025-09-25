@@ -1,9 +1,9 @@
-function handleNum(num, getEvenNumber, getOddNumber) {
+function handleNum(num, onEvenNumber, onOddNumber) {
     if (num % 2 === 0) {
-        return getEvenNumber();
+        return onEvenNumber();
     }
     else {
-        return getOddNumber()
+        return onOddNumber()
     }
 }
 
