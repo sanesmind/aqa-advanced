@@ -1,6 +1,6 @@
-async function fetchToDo() {
+async function fetchToDo(id) {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+        const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
         return response.json();
 
     }
@@ -9,9 +9,9 @@ async function fetchToDo() {
     }
 }
 
-async function fetchUser() {
+async function fetchUser(id) {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
         return response.json();
 
     }
@@ -20,10 +20,10 @@ async function fetchUser() {
     }
 }
 
-console.log(await fetchToDo());
+console.log(await fetchToDo(1));
 
-console.log(await fetchUser());
+console.log(await fetchUser(1));
 
-const allResult = Promise.all([fetchToDo(), fetchUser()]).then((result) => {console.log(result)})
+const allResult = Promise.all([fetchToDo(1), fetchUser(1)]).then((result) => {console.log(result)})
 
-const raceResult = Promise.race([fetchToDo(), fetchUser()]).then((result) => {console.log(result)})
+const raceResult = Promise.race([fetchToDo(1), fetchUser(1)]).then((result) => {console.log(result)})

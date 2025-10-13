@@ -1,15 +1,15 @@
 class JsonPlacaholderThen {
 
-    static fetchToDo() {
-        return fetch(`https://jsonplaceholder.typicode.com/todos/1`)
+    static fetchToDo(id) {
+        return fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
             .then(response => response.json())
             .then(todo => {
                 return todo
             })
             .catch((error) => {console.log(error.message)});
     }
-    static fetchUser() {
-        return fetch(`https://jsonplaceholder.typicode.com/users/1`)
+    static fetchUser(id) {
+        return fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             .then(response => response.json())
             .then(user => {
                 return user
@@ -18,15 +18,15 @@ class JsonPlacaholderThen {
     }
 }
 
-JsonPlacaholderThen.fetchToDo().then((todo) => {console.log(todo)});
+JsonPlacaholderThen.fetchToDo(1).then((todo) => {console.log(todo)});
 
-JsonPlacaholderThen.fetchUser().then((user) => {console.log(user)});
+JsonPlacaholderThen.fetchUser(1).then((user) => {console.log(user)});
 
 class JsonPlacaholderAwait {
 
-    static async fetchToDo() {
+    static async fetchToDo(id) {
         try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+            const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
             return response.json();
 
         }
@@ -34,9 +34,9 @@ class JsonPlacaholderAwait {
             console.log(error.message);
         }
     }
-    static async fetchUser() {
+    static async fetchUser(id) {
         try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+            const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
             return response.json();
         }
         catch (error) {
@@ -45,6 +45,6 @@ class JsonPlacaholderAwait {
     }
 }
 
-JsonPlacaholderThen.fetchToDo().then((todo) => {console.log(todo)});
+JsonPlacaholderThen.fetchToDo(1).then((todo) => {console.log(todo)});
 
-JsonPlacaholderThen.fetchUser().then((user) => {console.log(user)});
+JsonPlacaholderThen.fetchUser(1).then((user) => {console.log(user)});
