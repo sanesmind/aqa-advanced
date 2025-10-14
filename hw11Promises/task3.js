@@ -24,6 +24,8 @@ console.log(await fetchToDo(1));
 
 console.log(await fetchUser(1));
 
-const allResult = Promise.all([fetchToDo(1), fetchUser(1)]).then((result) => {console.log(result)})
+const allResult = Promise.all([fetchToDo(1), fetchUser(1)]).then((result) => {console.log(result);});
+console.log(allResult);
 
-const raceResult = Promise.race([fetchToDo(1), fetchUser(1)]).then((result) => {console.log(result)})
+const raceResult = Promise.race([fetchToDo(1), fetchUser(1)]).then((result) => {console.log(result);});
+console.log(raceResult);

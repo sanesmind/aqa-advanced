@@ -18,10 +18,10 @@ book.printInfo();
 console.log("----------------------------------------------------------");
 
 //task 3:
-book.author = 123
-book.name = 321
-book.yearOfPublishing = "rw"
-book.fileFormat = "dwor"
+book.author = 123;
+book.name = 321;
+book.yearOfPublishing = "rw";
+book.fileFormat = "dwor";
 
 console.log(`${book.name}  ${book.author}  ${book.yearOfPublishing}  ${book.fileFormat}`);
 
@@ -38,5 +38,5 @@ console.log(oldestBook);
 console.log("----------------------------------------------------------");
 
 //task 5:
-const eBook1 = EBook.convertToEBook(book1, "Word")
+const eBook1 = EBook.convertToEBook(book1, "Word");
 console.log(eBook1);

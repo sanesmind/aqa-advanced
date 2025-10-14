@@ -2,9 +2,9 @@
 
 const str = "This is a homework #4";
 const num = 543.76;
-let isActive = true;
-let nothing = null;
-let somethingUnknown = undefined;
+const isActive = true;
+const nothing = null;
+const somethingUnknown = undefined;
 // or just: let somethingUnknown;
 
 
@@ -20,10 +20,10 @@ console.log("-------------------------------");
 const name1 = "Alex";
 const name2 = "Robert";
 
-let greeting = "Hello, " + name1 + "! " + "Glad to see you, " + name2 + "!";
+const greeting = "Hello, " + name1 + "! " + "Glad to see you, " + name2 + "!";
 console.log(greeting);
 
-let secondGreeting = `Hello, ${name1}! Glad to see you, ${name2}!`
+const secondGreeting = `Hello, ${name1}! Glad to see you, ${name2}!`;
 console.log(secondGreeting);
 
 console.log("-------------------------------");

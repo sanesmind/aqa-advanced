@@ -46,7 +46,7 @@ export default class Book {
 
     static findOldestBook(books) {
         return books.reduce((oldestBook, book) => {
-            return oldestBook.yearOfPublishing < book.yearOfPublishing ? oldestBook : book
+            return oldestBook.yearOfPublishing < book.yearOfPublishing ? oldestBook : book;
         });
     }
 }

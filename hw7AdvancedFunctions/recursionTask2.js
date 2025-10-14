@@ -1,11 +1,11 @@
 function printCountDown(num){
     if (num <= 0){
-        return
+        return;
     }
-    console.log(num)
-    num--
-    printCountDown(num)
+    console.log(num);
+    num--;
+    printCountDown(num);
 }
 
 
-printCountDown(10)
+printCountDown(10);
