@@ -3,16 +3,16 @@ function handleNum(num, onEvenNumber, onOddNumber) {
         return onEvenNumber();
     }
     else {
-        return onOddNumber()
+        return onOddNumber();
     }
 }
 
 function handleEvenNumber(){
-    console.log("number is even")
+    console.log("number is even");
 }
 
 function handleOddNumber(){
-    console.log("number is odd")
+    console.log("number is odd");
 }
 
 

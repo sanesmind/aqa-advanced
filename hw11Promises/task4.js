@@ -4,23 +4,23 @@ class JsonPlacaholderThen {
         return fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
             .then(response => response.json())
             .then(todo => {
-                return todo
+                return todo;
             })
-            .catch((error) => {console.log(error.message)});
+            .catch((error) => {console.log(error.message);});
     }
     static fetchUser(id) {
         return fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
             .then(response => response.json())
             .then(user => {
-                return user
+                return user;
             })
-            .catch((error) => {console.log(error.message)});
+            .catch((error) => {console.log(error.message);});
     }
 }
 
-JsonPlacaholderThen.fetchToDo(1).then((todo) => {console.log(todo)});
+JsonPlacaholderThen.fetchToDo(1).then((todo) => {console.log(todo);});
 
-JsonPlacaholderThen.fetchUser(1).then((user) => {console.log(user)});
+JsonPlacaholderThen.fetchUser(1).then((user) => {console.log(user);});
 
 class JsonPlacaholderAwait {
 
@@ -45,6 +45,6 @@ class JsonPlacaholderAwait {
     }
 }
 
-JsonPlacaholderThen.fetchToDo(1).then((todo) => {console.log(todo)});
+JsonPlacaholderThen.fetchToDo(1).then((todo) => {console.log(todo);});
 
-JsonPlacaholderThen.fetchUser(1).then((user) => {console.log(user)});
+JsonPlacaholderAwait.fetchUser(1).then((user) => {console.log(user);});
